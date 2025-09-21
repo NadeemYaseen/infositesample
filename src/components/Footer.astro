@@ -1,0 +1,14 @@
+---
+// src/components/Footer.astro
+import Wave from './Wave.astro';
+const currentYear = new Date().getFullYear();
+---
+<footer class="relative mt-20">
+  <!-- The wave is now part of the footer -->
+  <Wave />
+
+  <!-- The copyright notice -->
+  <div class="bg-wave-color text-center p-6 text-light-text/70">
+    <p>&copy; {currentYear} Al-Anmol Creations. All Rights Reserved.</p>
+  </div>
+</footer>

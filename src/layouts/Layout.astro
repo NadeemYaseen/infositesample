@@ -1,0 +1,34 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/infositesample/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<!-- 
+		HERE IS THE CHANGE:
+		We apply our new background and text colors to the entire page.
+	-->
+	<body class="bg-dark-bg text-light-text">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	/* A simple reset to remove default browser margin */
+	body {
+		margin: 0;
+	}
+</style>

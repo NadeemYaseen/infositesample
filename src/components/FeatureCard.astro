@@ -1,0 +1,27 @@
+---
+// src/components/FeatureCard.astro
+interface Props {
+  title: string;
+  href: string;
+}
+
+const { title, href } = Astro.props;
+---
+<!-- 
+  This is a self-contained card.
+  - 'bg-wave-color' gives it a background that matches our footer.
+  - 'rounded-lg' gives it soft corners.
+  - 'group' allows us to change the title color on hover.
+  - 'transform hover:-translate-y-2' creates a cool "lift" effect on hover.
+-->
+<a href={href} class="block bg-wave-color p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 group">
+  <h3 class="text-2xl font-bold text-accent group-hover:text-white transition-colors duration-300">
+    {title}
+  </h3>
+  <!-- The <slot /> is a special Astro tag. It means "put any content
+       that was passed into this component right here". This lets us
+       write unique descriptions for each card. -->
+  <p class="mt-4 text-light-text/80">
+    <slot />
+  </p>
+</a>

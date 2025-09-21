@@ -1,0 +1,26 @@
+---
+// src/components/Header.astro
+---
+<!-- 
+  We are removing the 'group' and 'hover:' classes from this parent <header> element.
+  The background will now stay as a consistent gradient.
+-->
+<header class="p-4 bg-gradient-to-r from-accent to-accent-light text-dark-bg">
+  
+  <nav class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+    
+    <a href="/" class="text-2xl font-bold hover:text-white hover:underline transition-all">
+      Barcelona Guide
+    </a>
+
+    <div class="flex space-x-6">
+      <!-- 
+        THE FIX: The hover effect is now applied directly to each link.
+        When you hover, the text will turn white and get an underline for clarity.
+      -->
+      <a href="/restaurants" class="font-semibold hover:text-white hover:underline transition-all">Food</a>
+      <a href="/places" class="font-semibold hover:text-white hover:underline transition-all">Places</a>
+      <a href="/guides" class="font-semibold hover:text-white hover:underline transition-all">Guides</a>
+    </div>
+  </nav>
+</header>

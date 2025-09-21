@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   // 2. Add the integration to the `integrations` array
-  site: 'https://nadeemyaseen.github.io', // Your main GitHub Pages URL
-  base: '/infositesample/',  
+  site: 'https://infotempletesite.linkpc.net', // Your main GitHub Pages URL
+  base: '/',  
   integrations: [tailwind()]
 });

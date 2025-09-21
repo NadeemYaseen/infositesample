@@ -18,10 +18,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./barcelona-guide
+    
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
